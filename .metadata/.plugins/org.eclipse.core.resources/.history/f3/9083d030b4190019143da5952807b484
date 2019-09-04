@@ -1,0 +1,5 @@
+package store2;
+
+public class User {
+	private String name;
+}

@@ -1,0 +1,9 @@
+package com.s5.crm.service;
+
+/**
+ * @author Aresong
+ *客户管理service的接口
+ */
+public interface CustomerService {
+
+}

@@ -1,0 +1,97 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>修改人员信息</title>
+    <script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath }/js/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("[name='goBack']").click(function () {
+                window.location = "${pageContext.request.contextPath}/staffCtrl/gotoChoice"
+            });
+        });
+    </script>
+</head>
+<body>
+<form action="${pageContext.request.contextPath }/staffCtrl/updateOtherStaff" method="post">
+    <div align="center">人员信息</div>
+    <input type="hidden" name="pe_id" value="${staff.pe_id }"/>
+    <table align="center" border="1" bordercolor="#000000" cellspacing="0" cellpadding="2"
+           style="border-collapse:collapse;" bgcolor="#E6E6FA">
+        <tr>
+            <td align="right">人员姓名：</td>
+            <td><input type="text" name="pe_name" value="${staff.pe_name }"/></td>
+            <td align="right">性别：</td>
+            <td>
+                <input type="radio" value="1" name="pe_sex" <c:if test="${staff.pe_sex=='1'}">checked</c:if>/>男
+                <input type="radio" value="0" name="pe_sex" <c:if test="${staff.pe_sex=='0'}">checked</c:if>/>女
+            </td>
+        </tr>
+        <tr>
+            <td align="right">出生日期：</td>
+
+            <td><input type="text" name="pe_birthday" value="${pe_birthday }" onclick="WdatePicker()"/></td>
+            <td align="right">毕业学校：</td>
+            <td><input type="text" name="pe_school" value="${staff.pe_school}"/></td>
+        </tr>
+        <tr>
+            <td align="right">专业：</td>
+            <td>
+                <select name="pe_professional">
+                    <option value="17" <c:if test="${staff.pe_professional=='17'}">selected</c:if>>计算机
+                    <option value="18" <c:if test="${staff.pe_professional=='18'}">selected</c:if>>软件工程
+                </select>
+            </td>
+            <td align="right">学历：</td>
+            <td>
+                <select name="pe_record">
+                    <option value="7" <c:if test="${staff.pe_record=='7'}">selected</c:if>>高中</option>
+                    <option value="8" <c:if test="${staff.pe_record=='8'}">selected</c:if>>大专</option>
+                    <option value="9" <c:if test="${staff.pe_record=='9'}">selected</c:if>>本科</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">毕业日期：</td>
+            <td><input type="text" name="pe_finish_school" value="${pe_finish_school }" onclick="WdatePicker()"/></td>
+            <td align="right">身份证号：</td>
+            <td><input type="text" name="pe_cardid" value="${staff.pe_cardid}"/></td>
+        </tr>
+        <tr>
+            <td align="right">技术职称：</td>
+            <td>
+                <select name="pe_technical">
+                    <option value="10" <c:if test="${staff.pe_technical=='10'}">selected</c:if>>助理工程师</option>
+                    <option value="11" <c:if test="${staff.pe_technical=='11'}">selected</c:if>>工程师</option>
+                    <option value="12" <c:if test="${staff.pe_technical=='12'}">selected</c:if>>高级工程师</option>
+                </select>
+            </td>
+            <td align="right">评定日期：</td>
+            <td><input type="text" name="pe_assess_date" value="${pe_assess_date }" onclick="WdatePicker()"/></td>
+
+        </tr>
+        <tr>
+            <td align="right">通信地址：</td>
+            <td><input type="text" name="pe_address" value="${staff.pe_address}"/></td>
+            <td align="right">联系电话：</td>
+            <td><input type="text" name="pe_tel" value="${staff.pe_tel}"/></td>
+        </tr>
+        <tr>
+            <td align="right">业务专长：</td>
+            <td colspan="3" align="center">
+                <textarea name="pe_speciality" cols="60" rows="10">${staff.pe_speciality }</textarea>
+            </td>
+        </tr>
+    </table>
+    <div align="center">
+        <input type="submit" name="save" value="保存">
+        <input type="button" name="goBack" value="返回">
+    </div>
+</form>
+</body>
+</html>

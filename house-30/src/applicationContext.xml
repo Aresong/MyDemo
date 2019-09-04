@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+     http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/aop 
+     http://www.springframework.org/schema/aop/spring-aop.xsd     
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <!-- spring框架与hibernate框架整合。
+    1.(1)hibernate框架所需的sessionfactory类，由spring框架提供。
+     (2)hibernate框架的dao类，必须继承于spring框架提供的HibernateDaoSupport类
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        spring框架加载hibernate框架的配置文件
+    <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+    </bean>
+
+     spring框架提供的数据库连接方式：dbcp方式 -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+        <property name="username" value="house"/>
+        <property name="password" value="house"/>
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <!--<prop key="hibernate.current_session_context_class">thread</prop>-->
+            </props>
+        </property>
+        <!-- <property name="mappingResources">
+            <list>
+
+                <value>cn/bdqn/sshdemo/entity/SysEmployee.hbm.xml</value>
+                <value>cn/bdqn/sshdemo/entity/SysDepartment.hbm.xml</value>
+                <value>cn/bdqn/sshdemo/entity/SysPosition.hbm.xml</value>
+            </list>
+        </property> -->
+        <property name="mappingDirectoryLocations">
+            <list>
+                <value>classpath:cn/bdqn/house/entity/</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <!--2.利用spring框架的IoC，对dao和service进行依赖注入-->
+    <bean id="user" class="cn.bdqn.house.entity.HouseUser"></bean>
+    <bean id="house" class="cn.bdqn.house.entity.House"></bean>
+
+
+    <!--(1)注入dao类。id属性值，必须与service实现类中定义的dao变量名一致  -->
+    <bean id="houseUserDao" class="cn.bdqn.house.dao.impl.HouseUserDaoImpl" p:sessionFactory-ref="sessionFactory"/>
+    <!-- (2)注入service类。id属性值，必须与action中定义的service变量名一致 -->
+    <bean id="houseUserService" class="cn.bdqn.house.service.impl.HouseUserServiceImpl"
+          p:houseUserDao-ref="houseUserDao"/>
+
+    <bean id="districtDao" class="cn.bdqn.house.dao.impl.DistrictDaoImpl" p:sessionFactory-ref="sessionFactory"/>
+    <bean id="districtService" class="cn.bdqn.house.service.impl.DistrictServiceImpl" p:districtDao-ref="districtDao"/>
+
+    <bean id="streetDao" class="cn.bdqn.house.dao.impl.StreetDaoImpl" p:sessionFactory-ref="sessionFactory"/>
+    <bean id="streetService" class="cn.bdqn.house.service.impl.StreetServiceImpl" p:streetDao-ref="streetDao"/>
+
+    <bean id="houseTypeDao" class="cn.bdqn.house.dao.impl.HouseTypeDaoImpl" p:sessionFactory-ref="sessionFactory"/>
+    <bean id="houseTypeService" class="cn.bdqn.house.service.impl.HouseTypeServiceImpl"
+          p:houseTypeDao-ref="houseTypeDao"/>
+
+    <bean id="houseDao" class="cn.bdqn.house.dao.impl.HouseDaoImpl" p:sessionFactory-ref="sessionFactory"/>
+    <bean id="houseService" class="cn.bdqn.house.service.impl.HouseServiceImpl" p:houseDao-ref="houseDao"/>
+
+    <bean id="housePictureDao" class="cn.bdqn.house.dao.impl.HousePictureDaoImpl"
+          p:sessionFactory-ref="sessionFactory"/>
+    <bean id="housePictureService" class="cn.bdqn.house.service.impl.HousePictureServiceImpl"
+          p:housePictureDao-ref="housePictureDao"/>
+
+
+    <!-- spring框架与struts框架整合 -->
+    <bean id="HouseUserAction" class="cn.bdqn.house.action.HouseUserAction" scope="prototype">
+        <property name="houseUserService" ref="houseUserService"/>
+    </bean>
+    <bean id="HouseAction" class="cn.bdqn.house.action.HouseAction" scope="prototype">
+        <property name="houseService" ref="houseService"/>
+        <property name="houseTypeService" ref="houseTypeService"/>
+        <property name="districtService" ref="districtService"/>
+        <property name="streetService" ref="streetService"/>
+        <property name="housePictureService" ref="housePictureService"/>
+    </bean>
+
+    <!-- 3.利用spring框架的AOP，对service进行切入点设置 -->
+    <!-- 利用sessionFactory，配置事务管理 -->
+    <bean id="txMgr" class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+          p:sessionFactory-ref="sessionFactory"/>
+    <!-- 利用增强型切入点设置，解决原生spring框架的5步骤 -->
+    <tx:advice id="txAdv" transaction-manager="txMgr">
+        <!-- 配置具体实现事务管理的方法 -->
+        <tx:attributes>
+            <tx:method name="get*"/>
+            <tx:method name="*"/>
+        </tx:attributes>
+    </tx:advice>
+    <!-- 设置切入点 -->
+    <aop:config>
+        <aop:pointcut id="pnt" expression="execution(public * cn.bdqn.house.service.*.*(..))"/>
+        <aop:advisor advice-ref="txAdv" pointcut-ref="pnt"/>
+    </aop:config>
+</beans>

@@ -1,0 +1,9 @@
+package com.s5.crm.dao;
+
+/**
+ * @author Aresong
+ *客户管理dao的接口
+ */
+public interface CustomerDao {
+
+}

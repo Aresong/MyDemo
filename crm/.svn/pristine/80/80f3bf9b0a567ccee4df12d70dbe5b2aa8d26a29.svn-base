@@ -1,0 +1,13 @@
+package com.s5.crm.dao.impl;
+
+import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
+
+import com.s5.crm.dao.CustomerDao;
+
+/**
+ * @author Aresong
+ *客户管理dao的实现类
+ */
+public class CustomerDaoImpl extends HibernateDaoSupport implements CustomerDao {
+
+}

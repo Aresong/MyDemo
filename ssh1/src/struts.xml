@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!-- 配置Struts2的常量 -->
+    <constant name="struts.action.extension" value="action"/>
+    <constant name="struts.objectFactory" value="spring"/>
+
+    <!-- 配置Action -->
+    <package name="ssh1" extends="struts-default" namespace="/">
+        <!-- 这个地方中的class因为action已经移交给spring管理了
+            不用原来struts2自己创建的action了所以使用的spring管理的action
+            ※这个地方原来struts2创建的是多例的，交个spring管理之后变成单例的了
+            需要给他变成多例的，否则值栈就会出问题，因为一个action只有一个值栈
+         -->
+        <action name="customer_*" class="customerAction" method="{1}">
+
+        </action>
+    </package>
+</struts>

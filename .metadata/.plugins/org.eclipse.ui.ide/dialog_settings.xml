@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+    <list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+        <item value="J:\不出人头地不罢休\Java\学习资料\黑马视频\其他\29-SpringMVC V4.1+SSM整合(共39集)\01 第一套 推荐学习此套(老师讲得非常好)\03 SSM整合实战项目-CRM系统\源码笔记\crm32"/>
+        <item value="C:\Users\Aresong\Desktop\hibernate2"/>
+        <item value="E:\Program Files\myJava\hibernate2"/>
+        <item value="J:\不出人头地不罢休\Java\学习资料\黑马视频\其他\23.Struts2 框架(共54集)\02 Servlet的API&amp;封装\源码笔记\代码\struts2_day02"/>
+        <item value="E:\Program Files\myJava\house"/>
+        <item value="E:\Program Files\myJava\struts2_crm"/>
+        <item value="E:\Program Files\myJava\store-manager"/>
+        <item value="E:\Program Files\myJava\store-common"/>
+    </list>
+    <section name="CleanDialogSettings">
+        <item value="500" key="DIALOG_WIDTH"/>
+        <item value="true" key="TOGGLE_SELECTED"/>
+        <item value="416" key="DIALOG_HEIGHT"/>
+        <item value="710" key="DIALOG_X_ORIGIN"/>
+        <item value="260" key="DIALOG_Y_ORIGIN"/>
+    </section>
+    <section name="ExternalProjectImportWizard">
+        <item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+        <item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+        <item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+        <list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+            <item value="F:\黑马视频\第一个商城\17 泛型与常见数据结构\源码笔记\code\myCollection"/>
+            <item value="E:\Download\02.第二天（框架整合，后台系统搭建）\01.参考资料\逆向工程\generatorSqlmapCustom"/>
+            <item value="D:\文件缓存\QQ\QQ消息缓存\37104553\FileRecv\ssh整合"/>
+            <item value="D:\文件缓存\QQ\QQ消息缓存\37104553\FileRecv\house-30"/>
+            <item value="C:\Users\Administrator\Desktop\questions"/>
+            <item value="J:\Declaresystem"/>
+            <item value="E:\Program Files\myJava\Declaresystem"/>
+        </list>
+        <list key="WizardProjectsImportPage.STORE_ARCHIVES">
+            <item value=""/>
+        </list>
+    </section>
+    <section name="NewWizardAction">
+        <item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+        <list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+        </list>
+    </section>
+    <section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+        <item value="false" key="FilterByLocation"/>
+        <item value="true" key="ShowStatusLine"/>
+        <item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode/&gt;&#x0D;&#x0A;&lt;/History&gt;"
+              key="History"/>
+        <item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"
+              key="WorkingSet"/>
+        <item value="false" key="ShowDerived"/>
+        <section name="DialogBoundsSettings">
+            <item value="600" key="DIALOG_WIDTH"/>
+            <item value="1|微软雅黑|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|微软雅黑" key="DIALOG_FONT_NAME"/>
+            <item value="500" key="DIALOG_HEIGHT"/>
+            <item value="232" key="DIALOG_X_ORIGIN"/>
+            <item value="133" key="DIALOG_Y_ORIGIN"/>
+        </section>
+    </section>
+</section>

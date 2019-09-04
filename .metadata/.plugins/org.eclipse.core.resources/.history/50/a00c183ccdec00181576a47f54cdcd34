@@ -1,0 +1,23 @@
+package demo2;
+/**
+ * 
+ * ≤‚ ‘Hibernateµƒ“ªº∂ª∫¥Ê
+ * 
+ * **/
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import demo1.Customer;
+import utils.HibernateUtils;
+
+public class HibernateDemo2 {
+	Session session = HibernateUtils.openSession();
+	Transaction tx = session.beginTransaction();
+	
+	Customer customer1 = session.get(Customer.class, 1l);
+	private void syso() {
+		// TODO Auto-generated method stub
+
+	}
+	Customer customer2 = session.get(Customer.class, 1l);
+}

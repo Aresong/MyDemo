@@ -1,0 +1,57 @@
+package com.s5.hibernate.demo;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.junit.Test;
+
+import com.s5.hibernate.entity.Customer;
+import com.s5.hibernate.entity.LinkMan;
+import com.s5.hibernate.utils.HibernateUtils;
+
+public class HibernateDemo1 {
+	
+	@Test
+	public void demo1() {
+		Session session = HibernateUtils.getCurrentSession();
+		Transaction tx =session.beginTransaction();
+		
+		//创建一个客户
+		Customer customer = new Customer();
+		customer.setCust_name("理想文");
+		for (int i = 1; i <= 10; i++) {
+			LinkMan linkMan = new LinkMan();
+			linkMan.setLkm_name("王鼎"+i);
+			linkMan.setCustomer(customer);
+			customer.getLinkMans().add(linkMan);
+			session.save(linkMan);
+		}
+		session.save(customer);
+		tx.commit();
+		
+	}
+	
+	@Test
+	public void demo2() {
+		Session session = HibernateUtils.getCurrentSession();
+		Transaction tx =session.beginTransaction();
+		
+		Query query = session.createQuery("from Customer");
+		List<Customer> list = query.list();
+		
+		// sql中支持*号的写法：select * from cst_customer; 但是在HQL中不支持*号的写法。
+		/*
+		 * Query query = session.createQuery("select * from Customer");// 报错
+		 * List<Customer> list = query.list();
+		 */
+		
+		for(Customer customer:list) {
+			System.out.println(customer);
+		}
+		
+		tx.commit();
+		
+	}
+}

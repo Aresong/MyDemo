@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.s5.hibernate.entity&apos; to &apos;hibernate3/src&apos;&#x0D;&#x0A;- Original project: &apos;hibernate2&apos;&#x0D;&#x0A;- Destination element: &apos;hibernate3/src&apos;&#x0D;&#x0A;- Original element: &apos;hibernate2/src/com.s5.hibernate.entity&apos;" description="Copy package" destination="=hibernate3/src" element1="/src&lt;com.s5.hibernate.entity" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1543330229239" version="1.0"/>
+</session>

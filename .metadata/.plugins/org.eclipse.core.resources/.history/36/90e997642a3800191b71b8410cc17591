@@ -1,0 +1,13 @@
+package com.s5.crm.pojo;
+
+public class QueryVo {
+	//客户信息，和页面一致
+	private String custName;
+	private String custSource;
+	private String custIndustry;
+	private String custLevel;
+	
+	//当前页
+	private Interger page;
+	//每页数
+}

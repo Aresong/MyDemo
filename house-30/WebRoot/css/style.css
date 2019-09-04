@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+.footer-r {
+    float: right;
+}
+
+.top-r {
+    letter-spacing: 5px;
+    float: right;
+    vertical-align: top;
+}
+
+.logo {
+    width: 80px;
+    height: 60px;
+}
+
+.logo-big {
+    font-family: 宋体;
+    font-size: 45px;
+    color: blue;
+    font-weight: bold;
+}
+
+.text {
+    letter-spacing: 7px
+}
+
+.welcome {
+
+}

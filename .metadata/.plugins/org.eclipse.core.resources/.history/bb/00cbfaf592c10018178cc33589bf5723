@@ -1,0 +1,30 @@
+package _20180926;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("szh", "lcx");
+		map.put("zzk", "py");
+		map.put("dp", "pp");
+		
+		Set <Map.Entry<String, String>> entries = map.entrySet();
+		
+		for (Map.Entry<String, String> entry : entries) {
+			System.out.println("zf:"+entry.getKey()+"   xf:"+entry.getValue());
+		}
+		
+		Iterator<Map.Entry<String, String>> iterator = entries.iterator();
+		
+		if(iterator.hasNext()) {
+			System.out.println("zf:"+iterator.next().getKey()+"   xf:"+iterator.next().getValue());
+		}
+	}
+
+}

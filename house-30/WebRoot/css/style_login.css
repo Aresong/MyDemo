@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+.body {
+    background: #F0F0F0;
+}
+
+.table {
+    border: 1px;
+    background: #ECF5FF;
+    border-style: solid;
+    width: 420px;
+    height: 240px;
+    padding: 20px 35px 20px 35px;
+    margin-top: 8%;
+    margin-left: 36%;
+}
+
+.header {
+
+    font-weight: bolder;
+}
+
+.login_bu {
+    padding: 5px;
+    margin: 20px auto 50px auto;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+.footer-r {
+    float: right;
+}
+
+.logo {
+    width: 80px;
+    height: 60px;
+}
+
+.logo-big {
+    font-family: 宋体;
+    font-size: 45px;
+    color: blue;
+    font-weight: bold;
+}
+
+.text {
+    letter-spacing: 7px
+}

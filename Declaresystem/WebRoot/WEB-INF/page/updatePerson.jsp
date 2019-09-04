@@ -1,0 +1,70 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>修改在职人员合同信息</title>
+    <script type="text/javascript" src="${pageContext.request.contextPath }/js/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("[name='goBack']").click(function () {
+                window.location = "${pageContext.request.contextPath}/staffCtrl/getStaffList"
+            });
+
+            $("[name='save']").click(function () {
+                var rePactNo = $("[name='re_pactNo']").val();
+                var rePactDate = $("[name='re_pactDate']").val();
+                var reDept = $("[name='re_dept']").val();
+                if ("" == rePactDate) {
+                    alert("合同签订日期不能为空！")
+                } else if ("" == rePactNo) {
+                    alert("合同编号不能为空！")
+                } else if ("" == reDept) {
+                    alert("任职部门不能为空！")
+                } else {
+                    $("#updateForm").submit();
+                    alert("保存成功！")
+                }
+
+            });
+        });
+
+    </script>
+</head>
+<body>
+<form action="${pageContext.request.contextPath}/staffCtrl/saveUpdateStaff" method="post" id="updateForm">
+    <input type="hidden" name="pe_id" value="${relation.pe_id }"/>
+    <table align="center" border="1" bordercolor="#000000" cellspacing="0" cellpadding="2"
+           style="border-collapse:collapse;" bgcolor="#E6E6FA">
+        <tr>
+            <td>合同编号：</td>
+            <td>
+                <input type="text" name="re_pactNo" id="re_pactNo" value="${relation.re_pactNo }"/>
+            </td>
+        </tr>
+        <tr>
+            <td>合同签订日期：</td>
+            <td>
+                <input type="text" name="re_pactDate" id="re_pactDate"
+                       value="<fmt:formatDate value="${relation.re_pactDate }" type="date" dateStyle="default"/>"
+                       onclick="WdatePicker()"/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>合同任职部门：</td>
+            <td>
+                <input type="text" name="re_dept" id="re_dept" value="${relation.re_dept }"/>
+            </td>
+        </tr>
+    </table>
+    <div align="center">
+        <input type="button" name="save" value="保存">
+        <input type="button" name="goBack" value="返回">
+    </div>
+</form>
+</body>
+</html>

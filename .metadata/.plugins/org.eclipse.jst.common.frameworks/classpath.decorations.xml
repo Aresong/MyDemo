@@ -1,0 +1,7 @@
+<classpath>
+    <container id="struts2-1!org.eclipse.jst.j2ee.internal.web.container">
+        <entry id="E:/Program Files/myJava/struts2-1/WebContent/WEB-INF/lib/struts2-core-2.3.24.jar">
+            <source-attachment-path>E:/jar/struts-2.3.24-all.zip</source-attachment-path>
+        </entry>
+    </container>
+</classpath>

@@ -1,0 +1,22 @@
+package cn.declaresystem.ssm.interceptor;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+import cn.declaresystem.ssm.pojo.Enterprise;
+
+public class SysInterceptor extends HandlerInterceptorAdapter {
+	public boolean preHandle(HttpServletRequest request,
+			HttpServletResponse response,Object handler)throws Exception{
+		HttpSession session = request.getSession();
+		Enterprise enterprise = (Enterprise)session.getAttribute("enterpriseObject");
+		if(null==enterprise){
+			response.sendRedirect(request.getContextPath()+"/401.jsp");
+			return false;
+		}
+		return true;
+	}
+}

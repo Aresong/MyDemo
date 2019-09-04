@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.declaresystem.ssm.mapper.StaffMapper">
+    <resultMap type="Staff" id="StaffResultMap">
+        <id property="pe_id" column="PE_ID"/>
+        <result property="pe_name" column="PE_NAME"/>
+        <result property="pe_sex" column="PE_SEX"/>
+        <result property="pe_birthday" column="PE_BIRTHDAY"/>
+        <result property="pe_cardid" column="PE_CARDID"/>
+
+        <result property="pe_record" column="PE_RECORD"/>
+        <result property="pe_professional" column="PE_PROFESSIONAL"/>
+        <result property="pe_technical" column="PE_TECHNICAL"/>
+
+        <association property="relation" javaType="Relations">
+            <result property="re_dept" column="RE_DEPT"/>
+        </association>
+
+        <association property="dd1" javaType="DataDictionary">
+            <result property="name" column="dn1"/>
+        </association>
+        <association property="dd2" javaType="DataDictionary">
+            <result property="name" column="dn2"/>
+        </association>
+        <association property="dd3" javaType="DataDictionary">
+            <result property="name" column="dn3"/>
+        </association>
+
+    </resultMap>
+
+    <select id="getList" parameterType="HashMap" resultMap="StaffResultMap">
+        SELECT
+        p.PE_ID,p.PE_NAME,p.PE_SEX,p.PE_BIRTHDAY,
+        d1.DATA_NAME AS dn1,
+        d2.DATA_NAME AS dn2,
+        d3.DATA_NAME AS dn3,
+        r.RE_DEPT
+        FROM t_person_relation r
+        INNER JOIN t_person p
+        INNER JOIN t_data d1
+        INNER JOIN t_data d2
+        INNER JOIN t_data d3
+        WHERE r.PE_ID=p.PE_ID
+        AND p.PE_RECORD=d1.DATA_ID
+        AND p.PE_PROFESSIONAL=d2.DATA_ID
+        AND p.PE_TECHNICAL=d3.DATA_ID
+        AND r.RE_DELETEDATE IS NULL
+        AND r.GR_ID=#{gr_id}
+        ORDER BY p.PE_ID
+        LIMIT #{pageIndex},#{pageSize}
+    </select>
+
+    <select id="getCount" resultType="int">
+        SELECT count(RE_ID) AS cnt
+        FROM t_person_relation
+        WHERE GR_ID=#{gr_id}
+        AND RE_DELETEDATE IS NULL
+    </select>
+
+    <insert id="add" parameterType="Staff">
+        INSERT INTO t_person(PE_NAME,PE_SEX,PE_BIRTHDAY,PE_SCHOOL,
+        PE_PROFESSIONAL,PE_RECORD,PE_FINISH_SCHOOL,PE_CARDID,
+        PE_TECHNICAL,PE_ASSESS_DATE,PE_ADDRESS,PE_TEL,PE_SPECIALITY)
+        VALUES (#{pe_name,jdbcType=VARCHAR},#{pe_sex,jdbcType=CHAR},
+        #{pe_birthday,jdbcType=DATE},#{pe_school,jdbcType=VARCHAR},
+        #{pe_professional,jdbcType=INTEGER},#{pe_record,jdbcType=INTEGER},
+        #{pe_finish_school,jdbcType=DATE},#{pe_cardid,jdbcType=VARCHAR},
+        #{pe_technical,jdbcType=INTEGER},#{pe_assess_date,jdbcType=DATE},
+        #{pe_address,jdbcType=VARCHAR},#{pe_tel,jdbcType=VARCHAR},
+        #{pe_speciality,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="getOther" parameterType="HashMap" resultMap="StaffResultMap">
+        SELECT
+        p.PE_ID,p.PE_NAME,p.PE_SEX,p.PE_BIRTHDAY,
+        d1.DATA_NAME AS dn1,
+        d2.DATA_NAME AS dn2,
+        d3.DATA_NAME AS dn3,
+        p.PE_CARDID
+        FROM t_person p
+        INNER JOIN t_data d1
+        INNER JOIN t_data d2
+        INNER JOIN t_data d3
+        WHERE
+        p.PE_RECORD=d1.DATA_ID
+        AND p.PE_PROFESSIONAL=d2.DATA_ID
+        AND p.PE_TECHNICAL=d3.DATA_ID
+        AND p.PE_NAME like #{personName}
+        AND p.PE_CARDID like #{personId}
+        AND p.PE_ID IN(
+        SELECT
+        PE_ID
+        FROM t_person
+        WHERE PE_ID NOT IN(
+        SELECT
+        DISTINCT PE_ID
+        FROM t_person_relation
+        WHERE RE_DELETEDATE IS NULL
+        )
+        )
+    </select>
+
+    <select id="getById" parameterType="Integer" resultType="Staff">
+        SELECT
+        PE_ID,PE_NAME,PE_SEX,PE_BIRTHDAY,
+        PE_SCHOOL,PE_PROFESSIONAL,PE_RECORD,
+        PE_FINISH_SCHOOL,PE_CARDID,PE_TECHNICAL,
+        PE_ASSESS_DATE,PE_ADDRESS,PE_TEL,PE_SPECIALITY
+        FROM t_person
+        WHERE PE_ID=#{id}
+    </select>
+
+    <update id="update" parameterType="Staff">
+        UPDATE t_person
+        <set>
+            <if test="pe_name!=null">
+                PE_NAME=#{pe_name},
+            </if>
+            <if test="pe_sex!=null">
+                PE_SEX=#{pe_sex},
+            </if>
+            <if test="pe_birthday!=null">
+                PE_BIRTHDAY=#{pe_birthday},
+            </if>
+            <if test="pe_school!=null">
+                PE_SCHOOL=#{pe_school},
+            </if>
+            <if test="pe_professional!=null">
+                PE_PROFESSIONAL=#{pe_professional},
+            </if>
+            <if test="pe_record!=null">
+                PE_RECORD=#{pe_record},
+            </if>
+            <if test="pe_finish_school!=null">
+                PE_FINISH_SCHOOL=#{pe_finish_school},
+            </if>
+            <if test="pe_cardid!=null">
+                PE_CARDID=#{pe_cardid},
+            </if>
+            <if test="pe_technical!=null">
+                PE_TECHNICAL=#{pe_technical},
+            </if>
+            <if test="pe_assess_date!=null">
+                PE_ASSESS_DATE=#{pe_assess_date},
+            </if>
+            <if test="pe_address!=null">
+                PE_ADDRESS=#{pe_address},
+            </if>
+            <if test="pe_tel!=null">
+                PE_TEL=#{pe_tel},
+            </if>
+            <if test="pe_speciality!=null">
+                PE_SPECIALITY=#{pe_speciality}
+            </if>
+        </set>
+        <where>
+            PE_ID=#{pe_id}
+        </where>
+    </update>
+
+    <insert id="addRe" parameterType="Relations">
+        INSERT INTO t_person_relation(PE_ID,RE_PACTNO,RE_DEPT,GR_ID,RE_PACTDATE,RE_JOB)
+        VALUES (#{pe_id,jdbcType=INTEGER},#{re_pactNo,jdbcType=VARCHAR},
+        #{re_dept,jdbcType=VARCHAR},#{gr_id,jdbcType=INTEGER},
+        #{re_pactDate,jdbcType=DATE},#{re_job,jdbcType=INTEGER})
+    </insert>
+
+    <update id="delete" parameterType="HashMap">
+        UPDATE t_person_relation
+        <set>
+            <if test="re_deleteDate!=null">
+                RE_DELETEDATE=#{re_deleteDate}
+            </if>
+        </set>
+        <where>
+            RE_DELETEDATE IS NULL
+            AND PE_ID=#{pe_id}
+        </where>
+    </update>
+
+    <select id="getReById" parameterType="Integer" resultType="Relations">
+        SELECT PE_ID,RE_PACTNO,RE_DEPT,RE_PACTDATE
+        FROM t_person_relation
+        WHERE PE_ID=#{pe_id}
+        AND RE_DELETEDATE IS NULL
+    </select>
+
+    <update id="updateRe" parameterType="HashMap">
+        UPDATE t_person_relation
+        <set>
+            <if test="re_pactNo!=null">
+                RE_PACTNO=#{re_pactNo},
+            </if>
+            <if test="re_dept!=null">
+                RE_DEPT=#{re_dept},
+            </if>
+            <if test="re_pactDate!=null">
+                RE_PACTDATE=#{re_pactDate}
+            </if>
+        </set>
+        <where>
+            RE_DELETEDATE IS NULL
+            AND PE_ID=#{pe_id}
+        </where>
+    </update>
+</mapper>

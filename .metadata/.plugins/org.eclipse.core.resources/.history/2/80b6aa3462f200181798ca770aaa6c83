@@ -1,0 +1,53 @@
+package com.s5.hibernate.demo;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.criterion.Order;
+import org.junit.Test;
+
+import com.s5.hibernate.entity.Customer;
+import com.s5.hibernate.utils.HibernateUtils;
+
+public class HibernateDome2 {
+	@Test
+	/**
+	 * 简单的查询
+	 */
+	public void demo1() {
+		Session session = HibernateUtils.getCurrentSession();
+		Transaction tx = session.beginTransaction();
+		
+		// 获得Criteria的对象
+		Criteria criteria = session.createCriteria(Customer.class);
+		List<Customer> list = criteria.list();
+		
+		for (Customer customer : list) {
+			System.out.println(customer);
+		}
+		tx.commit();
+	}
+	
+	@Test
+	/**
+	 * 排序查询
+	 */
+	public void demo2(){
+		Session session = HibernateUtils.getCurrentSession();
+		Transaction tx = session.beginTransaction();
+		
+		// 排序查询
+		Criteria criteria = session.createCriteria(Customer.class);
+//		criteria.addOrder(Order.asc("cust_id")); // 升序
+		criteria.addOrder(Order.desc("cust_id")); // 降序
+		List<Customer> list = criteria.list();
+		
+		for (Customer customer : list) {
+			System.out.println(customer);
+		}
+		
+		tx.commit();
+	}	
+}

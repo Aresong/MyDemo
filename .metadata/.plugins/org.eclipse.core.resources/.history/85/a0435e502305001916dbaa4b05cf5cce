@@ -1,0 +1,7 @@
+package com.s5.spring.demo1;
+/**
+ * 使用JDK动态代理对UserDao产生代理
+ * **/
+public class JDKProxy {
+
+}

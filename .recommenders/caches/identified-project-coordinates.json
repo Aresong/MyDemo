@@ -1,0 +1,20 @@
+[
+  [
+    {
+      "location": "E:\\Program Files\\myJava\\crm_ssm",
+      "type": "PROJECT",
+      "hints": {
+        "PROJECT_NAME": "crm_ssm"
+      }
+    },
+    "ABSENT"
+  ],
+  [
+    {
+      "location": "E:\\Java\\jdk1.8.0_151",
+      "type": "JRE",
+      "hints": {}
+    },
+    "jre:jre:1.8.0"
+  ]
+]

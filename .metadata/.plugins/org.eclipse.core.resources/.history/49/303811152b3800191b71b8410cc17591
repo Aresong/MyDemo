@@ -1,0 +1,13 @@
+package com.s5.crm.service.impl;
+
+import com.s5.common.utils.Page;
+import com.s5.crm.pojo.Customer;
+import com.s5.crm.pojo.QueryVo;
+import com.s5.crm.service.CustomerService;
+
+public class CustomerServiceImpl implements CustomerService {
+	//通过四个条件，查询分页对象
+	public Page<Customer> selectPageByQueryVo(QueryVo vo){
+		
+	}
+}

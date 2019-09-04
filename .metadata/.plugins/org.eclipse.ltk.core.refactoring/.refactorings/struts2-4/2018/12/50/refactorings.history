@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;InterceptorDemo1.java&apos; to &apos;struts2-4/src/com.s5.web.interceptor&apos;&#x0D;&#x0A;- Original project: &apos;struts2-4&apos;&#x0D;&#x0A;- Destination element: &apos;struts2-4/src/com.s5.web.interceptor&apos;&#x0D;&#x0A;- Original element: &apos;com.s5.web.interceptor.InterceptorDemo1.java&apos;" description="Copy compilation unit" destination="/src&lt;com.s5.web.interceptor" element1="/src&lt;com.s5.web.interceptor{InterceptorDemo1.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1544707869806" units="1" version="1.0"/>
+</session>

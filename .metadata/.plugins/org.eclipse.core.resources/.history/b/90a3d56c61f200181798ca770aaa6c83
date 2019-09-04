@@ -1,0 +1,21 @@
+package com.s5.hibernate.demo;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.junit.Test;
+
+import com.s5.hibernate.entity.Customer;
+import com.s5.hibernate.entity.LinkMan;
+import com.s5.hibernate.utils.HibernateUtils;
+
+public class HibernateDome2 {
+	@Test
+	public void demo1() {
+		Session session = HibernateUtils.getCurrentSession();
+		Transaction tx =session.beginTransaction();
+		
+
+		tx.commit();
+		
+	}
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!-- 配置Struts2的常量 -->
+    <constant name="struts.action.extension" value="action"/>
+    <package name="demo1" extends="struts-default" namespace="/">
+        <global-results>
+            <result>/demo1/demo2.jsp</result>
+        </global-results>
+        <action name="requestDemo1" class="com.s5.struts2.demo1.RequestDemo1">
+            <result type="redirect">/demo1/test1.jsp</result>
+        </action>
+
+        <action name="requestDemo2" class="com.s5.struts2.demo1.RequestDemo2">
+        </action>
+
+        <action name="requestDemo3" class="com.s5.struts2.demo1.RequestDemo3">
+            <result type="redirect">jump.action</result>
+        </action>
+
+        <action name="jump">
+            <result>/demo1/test2.jsp</result>
+        </action>
+    </package>
+</struts>

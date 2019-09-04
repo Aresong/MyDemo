@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>组织机构框图</title>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+
+    </script>
+</head>
+<body>
+<h1><font color="red">说明：</font></h1>
+<p>1.上传的组织图尺寸必须在（宽：600px，高700px）</p>
+<p>2.上传的图片格式必须为（GIF,BMP,JPG,JPEG,PNG）</p>
+<form action="${pageContext.request.contextPath}/chartCtrl/addChart" method="post" enctype="multipart/form-data">
+    图片上传：<input type="file" name="chart">
+    <input type="submit" value="上传">${requestScope.chartErr }
+</form>
+<a href="${pageContext.request.contextPath}/listCtrl/getState">返回</a>
+<div align="center">组织机构框图</div>
+<hr>
+<c:if test="${null!=chartName}">
+    <div align="center"><img id="img" src="${pageContext.request.contextPath }/upload/${chartName }"></div>
+</c:if>
+</body>
+</html>

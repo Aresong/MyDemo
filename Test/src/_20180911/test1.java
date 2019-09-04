@@ -1,0 +1,34 @@
+package _20180911;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+
+public class test1 {
+
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Collection c = new ArrayList();
+        c.add("fuck");
+        c.add(1);
+        c.toArray();
+        System.out.println(c.contains("1"));
+        System.out.println(c.getClass());
+        Iterator<Object> iterator = c.iterator();
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        List<Object> list = new ArrayList<>();
+        list.add("qqq");
+        list.add(111);
+        list.add('a');
+        list.add(2.25);
+        System.out.println(list.get(2).hashCode());
+        System.out.println(list.get(3).getClass());
+    }
+
+}

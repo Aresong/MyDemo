@@ -1,0 +1,7 @@
+package com.s5.crm.mapper;
+
+public class CustomerDao {
+	//总条数
+	public Integer customerCount(QueryVo vo);
+	//结果集
+}

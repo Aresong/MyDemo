@@ -1,0 +1,39 @@
+package com.s5.spring.demo5;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+/**
+ * 集合属性的注入
+ **/
+public class CollectionBean {
+    private String[] arrs;
+    private List<String> lists;
+    private Set<String> set;
+    private Map<String, String> map;
+
+    public void setArrs(String[] arrs) {
+        this.arrs = arrs;
+    }
+
+    public void setLists(List<String> lists) {
+        this.lists = lists;
+    }
+
+    public void setSet(Set<String> set) {
+        this.set = set;
+    }
+
+    public void setMap(Map<String, String> map) {
+        this.map = map;
+    }
+
+    @Override
+    public String toString() {
+        return "CollectionBean [arrs=" + Arrays.toString(arrs) + ", lists=" + lists + ", set=" + set + ", map=" + map
+                + "]";
+    }
+
+}

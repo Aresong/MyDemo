@@ -1,0 +1,8 @@
+package com.s5.crm.service.impl;
+
+import com.s5.crm.service.CustomerService;
+
+public class CustomerServiceImpl implements CustomerService {
+	//通过四个条件，查询分页对象
+	
+}

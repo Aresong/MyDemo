@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.declaresystem.ssm.mapper.ManagerMapper">
+    <resultMap type="Staff" id="StaffResultMap">
+        <id property="pe_id" column="PE_ID"/>
+        <result property="pe_name" column="PE_NAME"/>
+        <result property="pe_sex" column="PE_SEX"/>
+        <result property="pe_birthday" column="PE_BIRTHDAY"/>
+        <result property="pe_cardid" column="PE_CARDID"/>
+        <result property="pe_school" column="PE_SCHOOL"/>
+        <result property="pe_assess_date" column="PE_ASSESS_DATE"/>
+        <result property="pe_speciality" column="PE_SPECIALITY"/>
+
+        <result property="pe_record" column="PE_RECORD"/>
+        <result property="pe_professional" column="PE_PROFESSIONAL"/>
+        <result property="pe_technical" column="PE_TECHNICAL"/>
+
+        <association property="relation" javaType="Relations">
+            <result property="re_dept" column="RE_DEPT"/>
+        </association>
+
+        <association property="dd1" javaType="DataDictionary">
+            <result property="name" column="dn1"/>
+        </association>
+        <association property="dd2" javaType="DataDictionary">
+            <result property="name" column="dn2"/>
+        </association>
+        <association property="dd3" javaType="DataDictionary">
+            <result property="name" column="dn3"/>
+        </association>
+        <association property="dd4" javaType="DataDictionary">
+            <result property="name" column="dn4"/>
+        </association>
+    </resultMap>
+
+    <select id="getCount" resultType="Integer">
+        SELECT count(RE_ID) AS cnt
+        FROM t_person_relation
+        WHERE GR_ID=#{gr_id}
+        AND RE_JOB NOT IN (13)
+        AND RE_DELETEDATE IS NULL
+    </select>
+
+    <select id="getList" parameterType="HashMap" resultMap="StaffResultMap">
+        SELECT
+        p.PE_ID,p.PE_NAME,p.PE_SEX,p.PE_BIRTHDAY,
+        d1.DATA_NAME AS dn1,
+        d2.DATA_NAME AS dn2,
+        d3.DATA_NAME AS dn3,
+        r.RE_DEPT,d4.DATA_NAME AS dn4,
+        p.PE_SCHOOL,p.PE_ASSESS_DATE,
+        p.PE_SPECIALITY
+        FROM t_person_relation r
+        INNER JOIN t_person p
+        INNER JOIN t_data d1
+        INNER JOIN t_data d2
+        INNER JOIN t_data d3
+        LEFT JOIN t_data d4
+        ON r.RE_JOB=d4.DATA_ID
+        WHERE r.PE_ID=p.PE_ID
+        AND p.PE_RECORD=d1.DATA_ID
+        AND p.PE_PROFESSIONAL=d2.DATA_ID
+        AND p.PE_TECHNICAL=d3.DATA_ID
+        AND r.RE_DELETEDATE IS NULL
+        AND r.GR_ID=#{gr_id}
+        AND r.RE_JOB NOT IN (13)
+        ORDER BY p.PE_ID
+        LIMIT #{pageIndex},#{pageSize}
+    </select>
+
+    <select id="getAllList" parameterType="Integer" resultMap="StaffResultMap">
+        SELECT
+        p.PE_ID,p.PE_NAME,p.PE_SEX,p.PE_BIRTHDAY,
+        d1.DATA_NAME AS dn1,
+        d2.DATA_NAME AS dn2,
+        d3.DATA_NAME AS dn3,
+        r.RE_DEPT,d4.DATA_NAME AS dn4
+        FROM t_person_relation r
+        INNER JOIN t_person p
+        INNER JOIN t_data d1
+        INNER JOIN t_data d2
+        INNER JOIN t_data d3
+        LEFT JOIN t_data d4
+        ON r.RE_JOB=d4.DATA_ID
+        WHERE r.PE_ID=p.PE_ID
+        AND p.PE_RECORD=d1.DATA_ID
+        AND p.PE_PROFESSIONAL=d2.DATA_ID
+        AND p.PE_TECHNICAL=d3.DATA_ID
+        AND r.RE_DELETEDATE IS NULL
+        AND r.GR_ID=#{gr_id}
+        AND P.PE_NAME LIKE #{personName}
+        AND P.PE_CARDID LIKE #{personId}
+        ORDER BY p.PE_ID
+    </select>
+
+    <update id="update" parameterType="HashMap">
+        UPDATE t_person_relation
+        <set>
+            <if test="re_job!=null">
+                RE_JOB=#{re_job}
+            </if>
+        </set>
+        <where>
+            PE_ID=#{pe_id}
+            AND GR_ID=#{gr_id}
+            AND RE_DELETEDATE IS NULL
+        </where>
+    </update>
+
+    <update id="cancelJob" parameterType="HashMap">
+        UPDATE t_person_relation
+        <set>
+            <if test="re_job!=null">
+                RE_JOB=#{re_job}
+            </if>
+        </set>
+        <where>
+            PE_ID=#{pe_id}
+            AND GR_ID=#{gr_id}
+            AND RE_DELETEDATE IS NULL
+        </where>
+    </update>
+</mapper>

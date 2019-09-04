@@ -1,0 +1,29 @@
+package demo2;
+/**
+ * 
+ * ≤‚ ‘Hibernateµƒ“ªº∂ª∫¥Ê
+ * 
+ * **/
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.junit.Test;
+
+import demo1.Customer;
+import utils.HibernateUtils;
+
+public class HibernateDemo2 {
+	@Test
+	public void demo1() {
+		Session session = HibernateUtils.openSession();
+		Transaction tx = session.beginTransaction();
+	
+		Customer customer1 = session.get(Customer.class, 1l);
+		System.out.println(customer1);
+		Customer customer2 = session.get(Customer.class, 1l);
+		System.out.println(customer2);
+		System.out.println(customer1 == customer2);
+		tx.commit();
+		session.close();
+	}
+
+}

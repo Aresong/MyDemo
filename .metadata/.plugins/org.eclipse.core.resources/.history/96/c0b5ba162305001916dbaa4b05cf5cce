@@ -1,0 +1,10 @@
+package com.s5.spring.demo1;
+
+import org.junit.jupiter.api.Test;
+
+public class SpringDemo1 {
+	@Test
+	public void demo1() {
+		UserDao userDao = new UserDaoImpl();
+	}
+}

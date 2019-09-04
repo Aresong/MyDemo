@@ -1,0 +1,30 @@
+package cn.declaresystem.ssm.service;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+
+import cn.declaresystem.ssm.pojo.Relations;
+import cn.declaresystem.ssm.pojo.Staff;
+
+public interface StaffService {
+    public List<Staff> getStaffList(HashMap<String, Integer> resultMap);
+
+    public int getStaffCount(Integer gr_id);
+
+    public void saveStaff(Staff staff);
+
+    public List<Staff> getOtherStaffList(String personName, String personId);
+
+    public Staff getStaffById(Integer id);
+
+    public void updateStaff(Staff staff);
+
+    public void addRelation(Relations relations);
+
+    public void deleteStaff(Date re_deleteDate, Integer pe_id);
+
+    public Relations getRelationById(Integer pe_id);
+
+    public void updateStaffRelation(Integer pe_id, String re_pactNo, Date re_pactDate, String re_dept);
+}

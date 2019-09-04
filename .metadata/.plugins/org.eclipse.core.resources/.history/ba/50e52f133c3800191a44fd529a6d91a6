@@ -1,0 +1,47 @@
+package com.s5.crm.service.impl;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.s5.common.utils.Page;
+import com.s5.crm.mapper.CustomerDao;
+import com.s5.crm.pojo.Customer;
+import com.s5.crm.pojo.QueryVo;
+import com.s5.crm.service.CustomerService;
+
+@Service
+public class CustomerServiceImpl implements CustomerService {
+	
+	@Resource
+	private CustomerDao customerDao;
+	//通过四个条件，查询分页对象
+	public Page<Customer> selectPageByQueryVo(QueryVo vo){
+		Page<Customer> page = new Page<Customer>();
+		//每页数
+		page.setSize(10);
+		vo.setSize(10);
+		//判断当前页
+		if(null != vo) {
+			if(null != vo.getPage()) {
+				page.setPage(vo.getPage());
+				vo.setStartRow((vo.getPage()-1)*vo.getSize());
+			}
+			if(null !=vo.getCustName() && "".equals(vo.getCustName())) {
+				vo.setCustName(vo.getCustName().trim());
+			}
+			if(null !=vo.getCustSource() && "".equals(vo.getCustSource())) {
+				vo.setCustSource(vo.getCustSource());
+			}
+			if(null !=vo.getCustIndustry() && "".equals(vo.getCustIndustry())) {
+				vo.setCustIndustry(vo.getCustIndustry());
+			}
+			//总条数
+			page.setTotal(customerDao.customerCountByQueryVo(vo));
+			//结果集
+			page.setRows(customerDao.selectCustomerListByQueryVo(vo));
+		}
+		return page;
+		
+	}
+}

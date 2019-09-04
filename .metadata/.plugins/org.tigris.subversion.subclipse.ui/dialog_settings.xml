@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+    <item value="103" key="passwordStores.location.y"/>
+    <item value="33" key="CommitDialog.location.y"/>
+    <item value="0" key="passwordStores.location.x"/>
+    <item value="345" key="CommitDialog.location.x"/>
+    <item value="" key="DirectorySelectionPage.lastParent_https://aresong-pc/svn/crm/trunk"/>
+    <item value="500" key="CommitDialog.weights.0"/>
+    <item value="698" key="RevertDialog.location.x"/>
+    <item value="500" key="CommitDialog.weights.1"/>
+    <item value="258" key="RevertDialog.location.y"/>
+    <item value="731" key="CommitDialog.size.y"/>
+    <item value="1231" key="CommitDialog.size.x"/>
+    <item value="" key="DirectorySelectionPage.lastParent_http://code.taobao.org/svn/Capstone_Project"/>
+    <item value="393" key="RevertDialog.size.y"/>
+    <item value="trunk" key="DirectorySelectionPage.lastParent_https://aresong-pc/svn/project-store"/>
+    <item value="525" key="RevertDialog.size.x"/>
+    <item value="626" key="passwordStores.size.y"/>
+    <item value="1920" key="passwordStores.size.x"/>
+    <item value="497" key="ChooseUrlDialog.size.x"/>
+    <item value="376" key="ChooseUrlDialog.size.y"/>
+    <item value="https://aresong-pc/svn/crm/trunk" key="RepositorySelectionPage.lastRepository"/>
+    <item value="712" key="ChooseUrlDialog.location.x"/>
+    <item value="216" key="ChooseUrlDialog.location.y"/>
+    <section name="CommitWizard">
+        <item value="500" key="VWeight2"/>
+        <item value="500" key="VWeight1"/>
+        <item value="false" key="ShowCompare"/>
+    </section>
+    <section name="IgnoreResourcesDialog">
+        <item value="0" key="Action"/>
+    </section>
+    <section name="NewLocationWizard">
+        <list key="ConfigurationWizardMainPage.STORE_URL_ID">
+            <item value="https://Aresong-PC/svn/crm/trunk"/>
+            <item value="https://Aresong-PC/svn/project-store/"/>
+        </list>
+    </section>
+</section>

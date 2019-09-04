@@ -1,0 +1,9 @@
+package com.s5.jdbc.demo1;
+
+public class Account {
+
+	private Integer id;
+	private String name;
+	private Double money;
+	
+}

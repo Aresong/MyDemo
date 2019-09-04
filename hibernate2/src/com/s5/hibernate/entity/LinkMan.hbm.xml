@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.s5.hibernate.entity.LinkMan" table="cst_linkman">
+        <!-- 建立OID与主键映射 -->
+        <id name="lkm_id" column="lkm_id">
+            <generator class="native"/>
+        </id>
+        <!-- 建立普通属性与表字段映射 -->
+        <!-- name和column是一样的column可以省略 -->
+        <property name="lkm_name"/>
+        <property name="lkm_gender"/>
+        <property name="lkm_phone"/>
+        <property name="lkm_mobile"/>
+        <property name="lkm_email"/>
+        <property name="lkm_qq"/>
+        <property name="lkm_position"/>
+        <property name="lkm_memo"/>
+
+        <!-- 配置多对一的关系：放置的是一的一方的对象 -->
+        <!--
+            many-to-one标签
+            * name		:一的一方的对象的属性名称。自定义对象的属性名！！！entity里面的LinkMan中的Customer定义的要是c，那这个位置也是c！！！
+            * class		:一的一方的类的全路径。
+            * column	:在多的一方的表的外键的名称。
+         -->
+        <many-to-one name="customer" class="com.s5.hibernate.entity.Customer" column="lkm_cust_id"
+                     cascade="save-update,delete"/>
+    </class>
+</hibernate-mapping>

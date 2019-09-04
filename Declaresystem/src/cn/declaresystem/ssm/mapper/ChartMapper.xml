@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.declaresystem.ssm.mapper.ChartMapper">
+    <insert id="add" parameterType="OrganizeChart">
+        INSERT INTO t_upload(GR_ID,FILE_NAME)
+        VALUES(#{gr_id,jdbcType=INTEGER},#{file_name,jdbcType=VARCHAR})
+    </insert>
+
+    <delete id="delete" parameterType="Integer">
+        DELETE
+        FROM t_upload
+        WHERE GR_ID=#{gr_id}
+    </delete>
+
+    <select id="get" parameterType="Integer" resultType="String">
+        SELECT FILE_NAME
+        FROM t_upload
+        WHERE GR_ID=#{gr_id}
+    </select>
+</mapper>

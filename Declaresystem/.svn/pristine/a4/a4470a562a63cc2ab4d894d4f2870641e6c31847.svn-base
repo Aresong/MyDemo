@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.declaresystem.ssm.mapper.registerMapper">
+
+	<resultMap type="BasicInfo" id="BasicInfoResultMap" >
+		<result property="base_id" column="BASE_ID" />
+        <result property="gr_id" column="GR_ID" />
+		<result property="address" column="BASE_ADDRESS"/>
+		<result property="postcode" column="BASE_POSTCODE"/>
+		<result property="tel" column="BASE_TEL"/>
+		<result property="fax" column="BASE_FAX"/>
+		<result property="email" column="BASE_EMAIL"/>
+		<result property="type" column="BASE_TYPE"/>
+		<result property="area" column="BASE_AREA"/>
+		<association property="dd1" javaType="DataDictionary">
+			<result property="name" column="d1n"/>
+		</association>
+		<association property="dd2" javaType="DataDictionary">
+			<result property="name" column="d2n"/>
+		</association>
+    </resultMap>
+    
+    <parameterMap type="BasicInfo" id="BasicInfoParameterMap">
+    	<parameter property="gr_id" resultMap="BasicInfoResultMap"/>
+    	<parameter property="address" resultMap="BasicInfoResultMap"/>
+    	<parameter property="postcode" resultMap="BasicInfoResultMap"/>
+    	<parameter property="tel" resultMap="BasicInfoResultMap"/>
+		<parameter property="fax" resultMap="BasicInfoResultMap"/>
+		<parameter property="email" resultMap="BasicInfoResultMap"/>
+		<parameter property="type" resultMap="BasicInfoResultMap"/>
+		<parameter property="area" resultMap="BasicInfoResultMap"/>
+    </parameterMap>
+    
+    <select id="getById"  parameterType="Integer" resultMap="BasicInfoResultMap">
+	   	SELECT 
+			b.BASE_ID,b.GR_ID,b.BASE_ADDRESS,b.BASE_POSTCODE,
+			b.BASE_TEL,b.BASE_FAX,b.BASE_EMAIL,b.BASE_TYPE,b.BASE_AREA,
+			d1.DATA_NAME AS d1n,d2.DATA_NAME AS d2n
+		FROM t_group_base b 
+        INNER JOIN t_data d1
+        INNER JOIN t_data d2
+		WHERE b.BASE_TYPE=d1.DATA_ID
+		AND b.BASE_AREA=d2.DATA_ID
+		AND b.GR_ID=#{id}
+	</select>
+	
+	<update id="update" parameterType="BasicInfo">
+		UPDATE t_group_base
+		<set>
+			<if test="address!=null">
+				BASE_ADDRESS=#{address},
+			</if>
+			<if test="postcode!=null">
+				BASE_POSTCODE=#{postcode},
+			</if>
+			<if test="tel!=null">
+				BASE_TEL=#{tel},
+			</if>
+			<if test="fax!=null">
+				BASE_FAX=#{fax},
+			</if>
+			<if test="email!=null">
+				BASE_EMAIL=#{email},
+			</if>
+			<if test="type!=null">
+				BASE_TYPE=#{type},
+			</if>
+			<if test="area!=null">
+				BASE_AREA=#{area}
+			</if>
+		</set>
+		<where>
+			GR_ID=#{gr_id}
+		</where>
+	</update>
+	
+	<insert id="add" parameterType="BasicInfo" parameterMap="BasicInfoParameterMap">
+		INSERT INTO t_group_base(GR_ID,BASE_ADDRESS,BASE_POSTCODE,BASE_TEL,BASE_FAX,
+		BASE_EMAIL,BASE_TYPE,BASE_AREA)
+		VALUES (#{gr_id,jdbcType=INTEGER},#{address,jdbcType=VARCHAR},#{postcode,jdbcType=CHAR},
+		        #{tel,jdbcType=VARCHAR},#{fax,jdbcType=VARCHAR},#{email,jdbcType=VARCHAR},
+		        #{type,jdbcType=INTEGER},#{area,jdbcType=INTEGER})
+	</insert>
+</mapper>

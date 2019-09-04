@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo
+            handle="=Declaresystem/E:\/Program Files\/myJava\/Declaresystem\/WebRoot\/WEB-INF\/lib\/spring-webmvc-3.2.13.RELEASE.jar&lt;org.springframework.web.servlet.handler(HandlerInterceptorAdapter.class[HandlerInterceptorAdapter"
+            modifiers="1057" timestamp="1501162186000"/>
+    <typeInfo handle="=store-manager-service/src\/main\/java&lt;com.store.service{ItemService.java[ItemService"
+              modifiers="513" timestamp="1536076684625"/>
+    <typeInfo
+            handle="=store-manager-service/E:\/Java\/jdk1.8.0_151\/jre\/lib\/rt.jar&lt;java.awt.event(ItemListener.class[ItemListener"
+            modifiers="1537" timestamp="1514392613708"/>
+    <typeInfo handle="=Test/E:\/Java\/jdk1.8.0_151\/jre\/lib\/rt.jar&lt;java.lang(Thread.class[Thread" modifiers="33"
+              timestamp="1514392613708"/>
+    <typeInfo handle="=Test/E:\/Java\/jdk1.8.0_151\/jre\/lib\/rt.jar&lt;java.lang(Runnable.class[Runnable"
+              modifiers="1537" timestamp="1514392613708"/>
+    <typeInfo
+            handle="=struts2-2/E:\/Program Files\/myJava\/struts2-2\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.24.jar&lt;com.opensymphony.xwork2(ActionSupport.class[ActionSupport"
+            modifiers="33" timestamp="1543726791703"/>
+    <typeInfo
+            handle="=struts2-3/E:\/Program Files\/myJava\/struts2-3\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.24.jar&lt;com.opensymphony.xwork2(ActionSupport.class[ActionSupport"
+            modifiers="33" timestamp="1543726791703"/>
+    <typeInfo
+            handle="=struts2-4/E:\/Program Files\/myJava\/struts2-4\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.24.jar&lt;com.opensymphony.xwork2(ActionSupport.class[ActionSupport"
+            modifiers="33" timestamp="1543726791703"/>
+    <typeInfo
+            handle="=struts2_crm/E:\/Program Files\/myJava\/struts2_crm\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.24.jar&lt;com.opensymphony.xwork2(ActionSupport.class[ActionSupport"
+            modifiers="33" timestamp="1543726791703"/>
+    <typeInfo
+            handle="=spring4_1/E:\/Java\/jdk1.8.0_151\/jre\/lib\/rt.jar&lt;java.nio.file.attribute(UserDefinedFileAttributeView.class[UserDefinedFileAttributeView"
+            modifiers="1537" timestamp="1514392613708"/>
+    <typeInfo handle="=spring4_1/src&lt;com.s5.spring.demo1{UserDao.java[UserDao" modifiers="513"
+              timestamp="1545053157600"/>
+    <typeInfo handle="=spring4_1/E:\/Java\/jdk1.8.0_151\/jre\/lib\/rt.jar&lt;com.sun.jmx.snmp(UserAcl.class[UserAcl"
+              modifiers="1537" timestamp="1514392613708"/>
+    <typeInfo handle="=spring4_1/src&lt;com.s5.spring.demo2{CustomerDao.java[CustomerDao" modifiers="513"
+              timestamp="1545059492182"/>
+    <typeInfo
+            handle="=spring4_crm/E:\/Java\/jdk1.8.0_151\/jre\/lib\/rt.jar&lt;javax.swing.plaf.basic(BasicPopupMenuUI$Actions.class[Actions"
+            modifiers="10" timestamp="1514392613708"/>
+    <typeInfo
+            handle="=spring4_crm/E:\/Program Files\/myJava\/spring4_crm\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.24.jar&lt;com.opensymphony.xwork2(ActionSupport.class[ActionSupport"
+            modifiers="33" timestamp="1543726791703"/>
+    <typeInfo handle="=spring4_crm/src&lt;com.s5.service{CustomerService.java[CustomerService" modifiers="513"
+              timestamp="1545231564819"/>
+    <typeInfo handle="=spring4_crm/src&lt;com.s5.dao{CustomerDao.java[CustomerDao" modifiers="513"
+              timestamp="1545232605385"/>
+    <typeInfo handle="=spring4_2_aop/src&lt;com.s5.spring.demo3{ProductDao.java[ProductDao" modifiers="513"
+              timestamp="1545751732909"/>
+    <typeInfo handle="=spring4_3_jdbc/src&lt;com.s5.tx.demo1{AccountService.java[AccountService" modifiers="513"
+              timestamp="1547038503286"/>
+    <typeInfo handle="=spring4_3_jdbc/src&lt;com.s5.tx.demo1{AccountDao.java[AccountDao" modifiers="513"
+              timestamp="1547038665149"/>
+    <typeInfo
+            handle="=ssh1/E:\/Program Files\/myJava\/ssh1\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.24.jar&lt;com.opensymphony.xwork2(ActionSupport.class[ActionSupport"
+            modifiers="33" timestamp="1547127440559"/>
+    <typeInfo
+            handle="=ssh1/E:\/Program Files\/myJava\/ssh1\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.24.jar&lt;com.opensymphony.xwork2(ModelDriven.class[ModelDriven"
+            modifiers="1537" timestamp="1547127440559"/>
+    <typeInfo handle="=ssh1/src&lt;com.s5.ssh.service{CustomerService.java[CustomerService" modifiers="513"
+              timestamp="1547133287110"/>
+    <typeInfo handle="=ssh1/src&lt;com.s5.ssh.dao{CustomerDao.java[CustomerDao" modifiers="513"
+              timestamp="1547556245290"/>
+    <typeInfo
+            handle="=crm/E:\/Java\/jdk1.8.0_151\/jre\/lib\/rt.jar&lt;com.sun.media.sound(ModelDirectedPlayer.class[ModelDirectedPlayer"
+            modifiers="1537" timestamp="1514392613708"/>
+    <typeInfo handle="=crm/src&lt;com.s5.crm.dao{CustomerDao.java[CustomerDao" modifiers="513"
+              timestamp="1548865820396"/>
+    <typeInfo handle="=crm/src&lt;com.s5.crm.service{CustomerService.java[CustomerService" modifiers="513"
+              timestamp="1548865249210"/>
+    <typeInfo
+            handle="=crm/E:\/Program Files\/myJava\/crm\/WebContent\/WEB-INF\/lib\/hibernate-core-5.0.7.Final.jar&lt;org.hibernate(CustomEntityDirtinessStrategy.class[CustomEntityDirtinessStrategy"
+            modifiers="1537" timestamp="1548244403673"/>
+    <typeInfo
+            handle="=crm/E:\/Program Files\/myJava\/crm\/WebContent\/WEB-INF\/lib\/spring-core-4.2.4.RELEASE.jar&lt;org.springframework.util(Base64Utils$Base64Delegate.class[Base64Delegate"
+            modifiers="1544" timestamp="1548244404037"/>
+    <typeInfo handle="=crm/src&lt;com.s5.crm.service{BaseDictService.java[BaseDictService" modifiers="513"
+              timestamp="1548854460928"/>
+    <typeInfo
+            handle="=crm/E:\/Program Files\/myJava\/crm\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.24.jar&lt;com.opensymphony.xwork2(ActionSupport.class[ActionSupport"
+            modifiers="33" timestamp="1548244404240"/>
+    <typeInfo
+            handle="=crm/E:\/Program Files\/myJava\/crm\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.24.jar&lt;com.opensymphony.xwork2(ModelDriven.class[ModelDriven"
+            modifiers="1537" timestamp="1548244404240"/>
+    <typeInfo handle="=crm_ssm/src&lt;com.s5.crm.service{CustomerService.java[CustomerService" modifiers="513"
+              timestamp="1551105087500"/>
+</typeInfoHistroy>

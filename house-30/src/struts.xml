@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <package name="house-30" namespace="/" extends="struts-default">
+        <!--判断用户登录配置   -->
+        <action name="login" class="HouseUserAction" method="login">
+            <!--普通用户跳转  -->
+            <result name="success" type="redirectAction">show</result>
+            <!--管理员用户跳转  -->
+            <result name="ok" type="redirectAction">show</result>
+            <result name="input">login.jsp</result>
+        </action>
+        <!--注册跳转  -->
+        <action name="register" class="HouseUserAction" method="register">
+            <result name="success">login.jsp</result>
+            <result name="input">register.jsp</result>
+        </action>
+
+
+        <action name="show1" class="HouseAction" method="show1">
+            <result name="success">index.jsp</result>
+        </action>
+
+        <action name="show" class="HouseAction" method="show">
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="add" class="HouseAction" method="add">
+            <result name="success" type="redirectAction">show</result>
+        </action>
+
+        <action name="houseTypeShow" class="HouseAction" method="houseTypeShow">
+            <result name="success">add.jsp</result>
+        </action>
+        <action name="update" class="HouseAction" method="update">
+            <result name="success">update.jsp</result>
+        </action>
+        <action name="updatedata" class="HouseAction" method="updatedata">
+            <result name="success" type="redirectAction">show</result>
+        </action>
+        <action name="deletedata" class="HouseAction" method="deletedata">
+            <result name="success" type="redirectAction">show</result>
+        </action>
+        <action name="lookhouse" class="HouseAction" method="lookhouse">
+            <result name="success">lookhouse.jsp</result>
+        </action>
+
+
+    </package>
+
+</struts>

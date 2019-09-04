@@ -1,0 +1,25 @@
+package cn.declaresystem.ssm.service.impl;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import cn.declaresystem.ssm.mapper.ChartMapper;
+import cn.declaresystem.ssm.pojo.OrganizeChart;
+import cn.declaresystem.ssm.service.ChartService;
+
+@Service
+public class ChartServiceImpl implements ChartService {
+	@Resource
+	private ChartMapper chartMapper;
+	@Override
+	public void saveChartInfo(OrganizeChart chart) {
+		chartMapper.delete(chart.getGr_id());
+		chartMapper.add(chart);
+	}
+	@Override
+	public String getChartName(Integer gr_id) {
+		return chartMapper.get(gr_id);
+	}
+
+}

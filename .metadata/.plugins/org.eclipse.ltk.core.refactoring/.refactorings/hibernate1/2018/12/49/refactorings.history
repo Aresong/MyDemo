@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;struts2_crm/src/com.s5.struts.entity&apos;&#x0D;&#x0A;- Original project: &apos;hibernate1&apos;&#x0D;&#x0A;- Destination element: &apos;struts2_crm/src/com.s5.struts.entity&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     demo1.Customer.java&#x0D;&#x0A;     Customer.hbm.xml" description="Copy elements" destination="=struts2_crm/src&lt;com.s5.struts.entity" element1="src/demo1/Customer.hbm.xml" element2="/src&lt;demo1{Customer.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1543856941954" units="1" version="1.0"/>
+</session>

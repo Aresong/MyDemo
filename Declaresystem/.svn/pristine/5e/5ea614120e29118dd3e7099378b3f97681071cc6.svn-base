@@ -1,0 +1,114 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>选取员工</title>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("[name='addPerson']").click(function(){
+			window.location = "${pageContext.request.contextPath}/staffCtrl/gotoAddPerson"
+		});
+		
+		$("[name='addRelation']").click(function(){
+			var val = $('input:radio[name="select"]:checked').val();
+			var rePactDate = $("[name='re_pactDate']").val()
+			var pactNo = $("[name='re_pactNo']").val()
+			var Dept = $("[name='re_dept']").val()
+			if(val==null){
+               alert("您未选择要添加到企业的员工！");
+               return false;
+            }else{
+            	if(""==rePactDate){
+            		alert("合同签订日期不能为空！")
+            	}else if(""==pactNo){
+            		alert("合同编号不能为空！")
+            	}else if(""==Dept){
+            		alert("任职部门不能为空！")
+            	}else{
+            		$("#pe_id").val(val)
+            		alert("添加到企业成功！")
+            		$("#addRelationForm").submit()
+            	}
+            }
+		}); 
+	});
+	
+	function update(frm,updateId){
+  		var obj = document.getElementById("updateId");
+  		obj.value = updateId;
+  		frm.submit();
+	}
+</script>
+
+</head>
+<body>
+	<form action="${pageContext.request.contextPath}/staffCtrl/gotoUpdateOtherStaff" method="post" id="updateForm">
+		<input type="hidden" name="updateId" id="updateId">
+	</form>
+	<table align="center" border="1" bordercolor="#000000" cellspacing="0" cellpadding="2" style="border-collapse:collapse;" bgcolor="#E6E6FA">
+		<tr>
+			<td colspan="9" height=1>
+				<form action="${pageContext.request.contextPath}/staffCtrl/getOtherStaff" method="post" >
+					人员搜索：姓名<input type="text" name="personName"/>
+					身份证号<input type="text" name="personId"/>
+					<input type="submit" name="search" value="搜索">
+					<input type="button" name="addPerson" value="新增">
+					<a href="${pageContext.request.contextPath}/staffCtrl/getStaffList">返回</a>
+				</form>	
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="center" width="50" height=1>选取</td>
+			<td align="center" width="130" height=1>姓名</td>
+			<td align="center" width="50" height=1>性别</td>
+			<td align="center" width="130" height=1>出生日期</td>
+			<td align="center" width="130" height=1>专业</td>
+			<td align="center" width="130" height=1>学历</td>
+			<td align="center" width="130" height=1>职称</td>
+			<td align="center" width="130" height=1>身份证号</td>
+			<td align="center" width="50" height=1>操作</td>
+		</tr>
+		<c:forEach var="itm" items="${otherList }" >
+		<tr>
+			<td align="center"><!-- <input type="radio" name="select"> -->
+				<input type="radio" name="select" value="${itm.pe_id }"/>
+			</td>
+			<td align="center">${itm.pe_name }</td>
+			<td align="center">
+				<c:choose>
+					<c:when test="${itm.pe_sex==0 }">女</c:when>
+					<c:otherwise>男</c:otherwise>
+				</c:choose>
+			</td>
+			<td align="center"><fmt:formatDate value="${itm.pe_birthday }" type="date" dateStyle="default"/></td>
+			<td align="center">${itm.dd1.name }</td>
+			<td align="center">${itm.dd2.name }</td>
+			<td align="center">${itm.dd3.name }</td>
+			<td align="center">${itm.pe_cardid }</td>
+			<td align="center">
+				<a href="javascript:update(document.getElementById('updateForm'),${itm.pe_id })">修改</a>
+			</td>
+		</tr>
+		</c:forEach>
+		<tr>
+			<td colspan="9">
+				<form action="${pageContext.request.contextPath}/staffCtrl/addRelation" method="post" id="addRelationForm">
+					合同签订日期：<input type="text" name="re_pactDate" onclick="WdatePicker()"/>
+					合同编号：<input type="text" name="re_pactNo"/>
+					任职部门：<input type="text" name="re_dept"/>
+					<input type="hidden" name="pe_id" id="pe_id">
+					<input type="button" value="添加到企业" name="addRelation">
+				</form>
+			</td>
+		</tr>
+	</table>
+	
+</body>
+</html>

@@ -1,0 +1,53 @@
+package cn.declaresystem.ssm.util;
+
+public class PageSupport {
+	private int totalCount;
+	private int totalPage;
+	private int pageSize;
+	private int pageIndex;
+	public int getTotalCount() {
+		return totalCount;
+	}
+	public void setTotalCount(int totalCount) {
+		this.totalCount = totalCount;
+	}
+	public int getTotalpage() {
+		if(0==totalCount){
+			totalPage = 0;
+		}else if(pageSize>totalCount){
+			totalPage = 1;
+		}else{
+			if(totalCount%pageSize==0){
+				totalPage = totalCount/pageSize;
+			}else{
+				totalPage = totalCount/pageSize+1;
+			}
+		}
+		return totalPage;
+	}
+	public void setTotalpage(int totalpage) {
+		this.totalPage = totalpage;
+	}
+	public int getPageSize() {
+		return pageSize;
+	}
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
+	}
+	public int getPageIndex() {
+		int result = pageIndex;
+		if(0!=totalPage){
+			if(pageIndex<1){
+				result = 1;
+			}
+			if(pageIndex>totalPage){
+				result = totalPage;
+			}
+		}
+		return result;
+	}
+	public void setPageIndex(int pageIndex) {
+		this.pageIndex = pageIndex;
+	}
+	
+}

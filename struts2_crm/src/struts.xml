@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!-- 配置Struts2的常量 -->
+    <constant name="struts.action.extension" value="action"/>
+
+    <package name="crm" extends="struts-default" namespace="/">
+
+        <!-- 定义拦截器 -->
+        <interceptors>
+            <interceptor name="PrivilegeInterceptor" class="com.s5.struts.interceptor.PrivilegeInterceptor"/>
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="defaultStack"/>
+                <interceptor-ref name="PrivilegeInterceptor">
+                    <param name="excludeMethods">login</param>
+                </interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+
+        <global-results>
+            <result name="login">/login.jsp</result>
+        </global-results>
+
+        <action name="customer_*" class="com.s5.struts.action.CustomerAction" method="{1}">
+            <result name="findSuccess">/jsp/customer/list.jsp</result>
+            <result name="saveUI">/jsp/customer/add.jsp</result>
+            <result name="saveSuccess" type="redirectAction">customer_find.action</result>
+            <!-- 引入拦截器 -->
+            <interceptor-ref name="myStack"/>
+        </action>
+
+        <action name="user_*" class="com.s5.struts.action.UserAction" method="{1}">
+            <result name="success" type="redirect">/index.jsp</result>
+            <result name="login">/login.jsp</result>
+            <interceptor-ref name="myStack"/>
+        </action>
+
+    </package>
+</struts>

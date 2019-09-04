@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="051efef6-7f79-45f8-b630-ad16998d778d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/401.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/401.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/addPerson.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/addPerson.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/base.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/base.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/chart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/chart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/choice.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/choice.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/managerChoice.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/managerChoice.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/print.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/print.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/printChart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/printChart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/staff.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/staff.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/updateInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/updateInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/updateOtherPerson.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/updateOtherPerson.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/page/updatePerson.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/page/updatePerson.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/My97DatePicker.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/My97DatePicker.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/WdatePicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/WdatePicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/demo.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/demo.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/lang/zh-cn.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/lang/zh-cn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/lang/zh-tw.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/lang/zh-tw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/skin/WdatePicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/skin/WdatePicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/skin/default/datepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/skin/default/datepicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/skin/whyGreen/datepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/js/My97DatePicker/skin/whyGreen/datepicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebRoot/js/jquery-1.8.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/js/jquery-1.8.3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/applicationContext-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resource/applicationContext-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/resource/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resource/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/springmvc-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resource/springmvc-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/ChartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/ChartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/ListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/ListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/ManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/PrintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/PrintController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/StaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/StaffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/interceptor/SysInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/interceptor/SysInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/ChartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/ChartMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/ChartMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/ChartMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/EnterpriseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/EnterpriseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/EnterpriseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/EnterpriseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/ManagerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/ManagerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/ManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/ManagerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/StaffMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/StaffMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/StaffMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/StaffMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/registerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/registerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/registerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/mapper/registerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/pojo/BasicInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/pojo/BasicInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/pojo/DataDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/pojo/DataDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/pojo/Enterprise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/pojo/Enterprise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/pojo/OrganizeChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/pojo/OrganizeChart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/pojo/Relations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/pojo/Relations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/pojo/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/pojo/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/ChartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/ChartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/EnterpriseUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/EnterpriseUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/ManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/ManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/PrintService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/PrintService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/StaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/StaffService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/impl/BaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/impl/BaseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/impl/ChartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/impl/ChartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/impl/EnterpriseUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/impl/EnterpriseUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/impl/ManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/impl/ManagerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/impl/PrintServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/impl/PrintServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/impl/StaffServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/service/impl/StaffServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/util/ExportStaffExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/util/ExportStaffExcel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/util/PageSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/util/PageSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/declaresystem/ssm/util/PrintStaffExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/declaresystem/ssm/util/PrintStaffExcel.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/WebRoot/WEB-INF/classes/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="42" column="72" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\MavenRepository" />
+        <option name="mavenHome" value="E:/Program Files/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="E:\Program Files\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="866" />
+    <option name="y" value="88" />
+    <option name="width" value="1072" />
+    <option name="height" value="761" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Declaresystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Declaresystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Declaresystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Declaresystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Declaresystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Declaresystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Declaresystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Declaresystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="declaresystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Declaresystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Declaresystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="declaresystem" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Declaresystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Declaresystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="declaresystem" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Declaresystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Declaresystem" type="462c0819:PsiDirectoryNode" />
+              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Declaresystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Declaresystem" type="462c0819:PsiDirectoryNode" />
+              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Declaresystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Declaresystem" type="462c0819:PsiDirectoryNode" />
+              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\Aresong\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="J:\workspace\myJava\Declaresystem" />
+          <option name="myCopyRoot" value="J:\workspace\myJava\Declaresystem" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="J:\workspace\myJava\Declaresystem" />
+          <option name="myCopyRoot" value="J:\workspace\myJava\Declaresystem" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="051efef6-7f79-45f8-b630-ad16998d778d" name="Default Changelist" comment="" />
+      <created>1556377131710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556377131710</updated>
+      <workItem from="1556377135303" duration="668000" />
+      <workItem from="1556456835474" duration="64000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="732000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13752665" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/cn/declaresystem/ssm/util/PageSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/applicationContext-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-665" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="42" column="72" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

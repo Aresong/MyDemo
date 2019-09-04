@@ -1,0 +1,21 @@
+package com.s5.crm.service.impl;
+
+import org.springframework.transaction.annotation.Transactional;
+
+import com.s5.crm.dao.CustomerDao;
+import com.s5.crm.service.CustomerService;
+
+/**
+ * @author Aresong
+ *客户管理service的实现类
+ */
+
+@Transactional
+public class CustomerServiceImpl implements CustomerService {
+	
+	private CustomerDao customerDao;
+
+	public void setCustomerDao(CustomerDao customerDao) {
+		this.customerDao = customerDao;
+	}
+}

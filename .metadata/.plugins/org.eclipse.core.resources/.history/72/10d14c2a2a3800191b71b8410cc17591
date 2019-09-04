@@ -1,0 +1,5 @@
+package com.s5.crm.pojo;
+
+public class QueryVo {
+	//客户名称
+}

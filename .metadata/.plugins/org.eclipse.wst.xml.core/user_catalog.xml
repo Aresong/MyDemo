@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri name="http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd"
+         uri="file:///E:/dtd/hibernate-configuration-3.0.dtd"/>
+    <uri name="http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" uri="file:///E:/dtd/hibernate-mapping-3.0.dtd"/>
+    <public publicId="http://struts.apache.org/dtds/struts-2.3.dtd" uri="file:///E:/dtd/struts-2.3.dtd"/>
+    <system systemId="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+            uri="file:///E:/dtd/spring-beans-4.2.xsd"/>
+    <system systemId="http://www.springframework.org/schema/aop/spring-aop.xsd"
+            uri="file:///E:/dtd/spring-aop-4.2.xsd"/>
+</catalog>

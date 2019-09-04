@@ -1,0 +1,60 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>基本信息修改</title>
+</head>
+<body>
+<form action="${pageContext.request.contextPath }/register/update" method="post">
+    <input type="hidden" name="gr_id" value="${basicInfo.gr_id }">
+    <input type="hidden" name="base_id" value="${basicInfo.base_id }">
+    <table align="center" border="1" bordercolor="#000000" cellspacing="0" cellpadding="2"
+           style="border-collapse:collapse;" bgcolor="#E6E6FA">
+        <tr>
+            <td>机构性质</td>
+            <td>
+                <select name="type">
+                    <option value="1" <c:if test="${basicInfo.type=='1'}">selected</c:if>>国企</option>
+                    <option value="2" <c:if test="${basicInfo.type=='2'}">selected</c:if>>民企</option>
+                    <option value="3" <c:if test="${basicInfo.type=='3'}">selected</c:if>>外企</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>行政区属</td>
+            <td>
+                <select name="area">
+                    <option value="4" <c:if test="${basicInfo.area=='4'}">selected</c:if>>沈阳</option>
+                    <option value="5" <c:if test="${basicInfo.area=='5'}">selected</c:if>>大连</option>
+                    <option value="6" <c:if test="${basicInfo.area=='6'}">selected</c:if>>鞍山</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>联系地址</td>
+            <td><input type="text" name="address" value="${basicInfo.address }"/></td>
+        </tr>
+        <tr>
+            <td>邮编</td>
+            <td><input type="text" name="postcode" value="${basicInfo.postcode }"/></td>
+        </tr>
+        <tr>
+            <td>联系电话</td>
+            <td><input type="text" name="tel" value="${basicInfo.tel }"/></td>
+        </tr>
+        <tr>
+            <td>传真</td>
+            <td><input type="text" name="fax" value="${basicInfo.fax }"/></td>
+        </tr>
+        <tr>
+            <td>邮箱</td>
+            <td><input type="text" name="email" value="${basicInfo.email }"/></td>
+        </tr>
+    </table>
+    <div align="center"><input type="submit" value="保存"></div>
+</form>
+</body>
+</html>

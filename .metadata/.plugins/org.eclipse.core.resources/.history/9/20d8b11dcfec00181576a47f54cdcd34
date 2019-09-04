@@ -1,0 +1,31 @@
+package demo2;
+/**
+ * 
+ * 测试Hibernate的一级缓存
+ * 
+ * **/
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.junit.Test;
+
+import demo1.Customer;
+import utils.HibernateUtils;
+
+public class HibernateDemo2 {
+	@Test
+	public void demo1() {
+		Session session = HibernateUtils.openSession();
+		Transaction tx = session.beginTransaction();
+	
+		Customer customer1 = session.get(Customer.class, 1l);//发送SQL语句
+		System.out.println(customer1);
+		Customer customer2 = session.get(Customer.class, 1l);//不发送SQL语句
+		System.out.println(customer2);
+		System.out.println(customer1 == customer2);
+		
+		Customer customer = new Customer();
+		tx.commit();
+		session.close();
+	}
+
+}

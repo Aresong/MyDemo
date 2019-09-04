@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="carInfo" class="com.s5.spring.demo4.CarInfo">
+    </bean>
+
+    <bean id="car2" class="com.s5.spring.demo4.Car2">
+        <property name="name" value="#{carInfo.name}"/>
+        <property name="price" value="#{carInfo.calculatorPrice()}"/>
+    </bean>
+
+    <bean id="employeesb" class="com.s5.spring.demo4.Employee">
+        <property name="name" value="#{'赵大宝'}"/>
+        <property name="car2" value="#{car2}"/>
+    </bean>
+
+    <!-- Spring的集合属性的注入 -->
+    <!-- 注入数组类型 -->
+    <bean id="collectionBean" class="com.s5.spring.demo5.CollectionBean">
+        <!-- 数组类型和list类型是一样的 -->
+        <property name="arrs">
+            <list>
+                <value>王东</value>
+                <value>赵红</value>
+                <value>曹尼玛</value>
+            </list>
+        </property>
+
+        <!-- 注入list集合 -->
+        <property name="lists">
+            <list>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+            </list>
+        </property>
+
+        <!-- 注入set集合 -->
+        <property name="set">
+            <list>
+                <value>111</value>
+                <value>222</value>
+                <value>333</value>
+            </list>
+        </property>
+
+        <!-- 注入map集合 -->
+        <property name="map">
+            <map>
+                <entry key="aaa" value="111"/>
+                <entry key="bbb" value="222"/>
+                <entry key="ccc" value="333"/>
+            </map>
+        </property>
+    </bean>
+
+
+</beans>

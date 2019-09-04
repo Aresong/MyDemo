@@ -1,0 +1,14 @@
+package cn.declaresystem.ssm.mapper;
+
+import java.util.HashMap;
+import java.util.List;
+
+import cn.declaresystem.ssm.pojo.Staff;
+
+public interface ManagerMapper {
+	public Integer getCount(Integer gr_id);
+	public List<Staff> getList(HashMap<String, Integer> staffMap);
+	public List<Staff> getAllList(HashMap<String, Object> staffMap);
+	public void update(HashMap<String, Integer> updateMap); 
+	public void cancelJob(HashMap<String, Integer> updateMap);
+}

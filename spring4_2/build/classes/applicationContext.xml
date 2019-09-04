@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+    <!-- Spring的IOC的注解的入门 -->
+    <!-- 使用IOC的注解开发，配置注解扫描，ssm这也有 -->
+    <!-- 扫描是为了扫描类上的注解，这里光执行demo3不用扫描 -->
+    <context:component-scan base-package="com.s5.spring"/>
+    <!-- 在没有扫描的情况下，使用属性注入的注解：@Resource、@Value、@Autowired、@Qulifier -->
+    <context:annotation-config/>
+
+    <bean id="productDao" class="com.s5.spring.demo3.ProductDao"/>
+    <bean id="orderDao" class="com.s5.spring.demo3.OrderDao"/>
+    <bean id="productService" class="com.s5.spring.demo3.ProductService"/>
+
+</beans>
